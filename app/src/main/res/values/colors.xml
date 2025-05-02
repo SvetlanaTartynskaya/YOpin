@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorBackground">#F5F5DC</color>
+    <color name="colorPrimary">#0A3D0A</color>
+    <color name="colorPrimaryDark">#072807</color>
+
+    <!-- Основная цветовая палитра -->
+    <color name="dark_green">#0A3D0A</color>
+    <color name="dark_green_variant">#072807</color>
+    <color name="light_green">#1B5E20</color>
+    <color name="accent_gold">#D4AF37</color>
+    <color name="accent_cream">#FFFDD0</color>
+    <color name="background_beige">#F5F5DC</color>
+    <color name="text_dark">#1A3311</color>
+    <color name="text_light">#F5F5DC</color>
+    <color name="disabled_gray">#9E9E9E</color>
+    <color name="ripple_color">#3DF5F5DC</color>
+    
+    <!-- Градиентные цвета -->
+    <color name="gradient_start">#072807</color>
+    <color name="gradient_center">#0A3D0A</color>
+    <color name="gradient_end">#1B5E20</color>
+    
+    <!-- Цвета рейтинга -->
+    <color name="rating_active">#D4AF37</color>
+    <color name="rating_inactive">#D1C8A8</color>
+    
+    <!-- Новые декоративные цвета -->
+    <color name="accent_leaf">#537A4C</color>
+    <color name="accent_sand">#E8D6B3</color>
+    <color name="accent_wood">#8B5A2B</color>
+</resources>

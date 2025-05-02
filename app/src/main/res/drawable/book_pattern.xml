@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    
+    <!-- Книга 1 -->
+    <path
+        android:fillColor="@color/dark_green"
+        android:pathData="M15,20L30,20L30,45L22.5,41L15,45z"/>
+    <path
+        android:fillColor="@color/accent_gold"
+        android:strokeWidth="0.5"
+        android:strokeColor="@color/white"
+        android:pathData="M16,22L29,22L29,24L16,24z"/>
+    
+    <!-- Книга 2 -->
+    <path
+        android:fillColor="@color/accent_leaf"
+        android:pathData="M40,25L55,25L55,50L47.5,46L40,50z"/>
+    <path
+        android:fillColor="@color/accent_gold"
+        android:strokeWidth="0.5"
+        android:strokeColor="@color/white"
+        android:pathData="M41,27L54,27L54,29L41,29z"/>
+    
+    <!-- Книга 3 -->
+    <path
+        android:fillColor="@color/accent_wood"
+        android:pathData="M65,15L80,15L80,40L72.5,36L65,40z"/>
+    <path
+        android:fillColor="@color/accent_gold"
+        android:strokeWidth="0.5"
+        android:strokeColor="@color/white"
+        android:pathData="M66,17L79,17L79,19L66,19z"/>
+    
+    <!-- Книга 4 -->
+    <path
+        android:fillColor="@color/dark_green_variant"
+        android:pathData="M10,60L25,60L25,85L17.5,81L10,85z"/>
+    <path
+        android:fillColor="@color/accent_gold"
+        android:strokeWidth="0.5"
+        android:strokeColor="@color/white"
+        android:pathData="M11,62L24,62L24,64L11,64z"/>
+    
+    <!-- Книга 5 -->
+    <path
+        android:fillColor="@color/accent_leaf"
+        android:pathData="M75,55L90,55L90,80L82.5,76L75,80z"/>
+    <path
+        android:fillColor="@color/accent_gold"
+        android:strokeWidth="0.5"
+        android:strokeColor="@color/white"
+        android:pathData="M76,57L89,57L89,59L76,59z"/>
+    
+    <!-- Книга 6 (новая) -->
+    <path
+        android:fillColor="@color/dark_green"
+        android:pathData="M45,65L60,65L60,90L52.5,86L45,90z"/>
+    <path
+        android:fillColor="@color/accent_gold"
+        android:strokeWidth="0.5"
+        android:strokeColor="@color/white"
+        android:pathData="M46,67L59,67L59,69L46,69z"/>
+    
+    <!-- Декоративные элементы -->
+    <path
+        android:fillColor="@color/accent_gold"
+        android:pathData="M35,10 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0z"/>
+    
+    <path
+        android:fillColor="@color/accent_gold"
+        android:pathData="M70,95 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0z"/>
+</vector> 

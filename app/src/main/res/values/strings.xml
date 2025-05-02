@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">YOpin</string>
+    <string name="book_icon">Иконка книги</string>
+    <string name="author_icon">Иконка автора</string>
+    <string name="add_book">Добавить книгу</string>
+    <string name="add_review">Добавить отзыв</string>
+    <string name="profile">Профиль</string>
+    <string name="reviews">Отзывы</string>
+    <string name="books">Книги</string>
+    <string name="login">Вход</string>
+    <string name="register">Регистрация</string>
+    <string name="logout">Выход</string>
+    <string name="password">Пароль</string>
+    <string name="email">Email</string>
+    
+    <plurals name="review_count">
+        <item quantity="zero">Нет отзывов</item>
+        <item quantity="one">%d отзыв</item>
+        <item quantity="few">%d отзыва</item>
+        <item quantity="many">%d отзывов</item>
+        <item quantity="other">%d отзывов</item>
+    </plurals>
+    
+    <string name="no_rating">Без оценки</string>
+    <string name="write_review">Написать отзыв</string>
+    <string name="delete_book">Удалить книгу</string>
+    <string name="edit_book">Редактировать книгу</string>
+    <string name="delete_review">Удалить отзыв</string>
+    <string name="edit_review">Редактировать отзыв</string>
+    <string name="no_books_found">Книги не найдены</string>
+    <string name="no_reviews_found">Отзывы не найдены</string>
+    <string name="search_hint">Поиск по названию или автору</string>
+    <string name="filter">Фильтр</string>
+    <string name="sort">Сортировка</string>
+</resources>

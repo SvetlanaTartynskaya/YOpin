@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Тень -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#33000000" />
+            <corners android:radius="12dp" />
+            <padding
+                android:bottom="2dp"
+                android:left="1dp"
+                android:right="2dp"
+                android:top="1dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#22000000" />
+            <corners android:radius="12dp" />
+            <padding
+                android:bottom="2dp"
+                android:left="1dp"
+                android:right="1dp"
+                android:top="1dp" />
+        </shape>
+    </item>
+    <!-- Фон карточки -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/accent_cream" />
+            <corners android:radius="12dp" />
+        </shape>
+    </item>
+    <!-- Декоративная рамка -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="12dp" />
+            <stroke
+                android:width="1.5dp"
+                android:color="@color/accent_wood" />
+            <padding
+                android:bottom="6dp"
+                android:left="6dp"
+                android:right="6dp"
+                android:top="6dp" />
+        </shape>
+    </item>
+    <!-- Внутренняя рамка -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="8dp" />
+            <stroke
+                android:width="0.8dp"
+                android:color="@color/dark_green"
+                android:dashWidth="6dp"
+                android:dashGap="3dp" />
+        </shape>
+    </item>
+</layer-list> 

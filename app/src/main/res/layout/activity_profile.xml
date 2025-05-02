@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/colorBackground">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Профиль пользователя"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="32dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:layout_marginBottom="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ФИО:"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tvFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email:"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Дата рождения:"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tvBirthDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/btnEditBirthDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Изменить дату"
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                android:backgroundTint="@color/colorPrimary"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnViewBooks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Просмотр книг"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnWriteReview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Написать общий отзыв"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnMyReviews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Мои отзывы"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/colorPrimaryDark"/>
+
+</LinearLayout>

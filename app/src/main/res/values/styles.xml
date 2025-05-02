@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Базовая тема приложения -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/dark_green</item>
+        <item name="colorPrimaryDark">@color/dark_green_variant</item>
+        <item name="colorAccent">@color/accent_gold</item>
+        <item name="android:windowBackground">@color/background_beige</item>
+        <item name="android:statusBarColor">@color/dark_green_variant</item>
+        <item name="android:navigationBarColor">@color/dark_green_variant</item>
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:textColorHint">@color/disabled_gray</item>
+        <item name="android:colorControlNormal">@color/dark_green</item>
+        <item name="android:colorControlActivated">@color/accent_gold</item>
+        <item name="actionBarStyle">@style/ActionBarStyle</item>
+        <item name="buttonStyle">@style/AppButton</item>
+        <item name="editTextStyle">@style/AppEditText</item>
+        <item name="ratingBarStyle">@style/RatingBarStyle</item>
+    </style>
+
+    <!-- Стиль для ActionBar -->
+    <style name="ActionBarStyle" parent="Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="background">@drawable/actionbar_background</item>
+        <item name="titleTextStyle">@style/ActionBarTitleStyle</item>
+    </style>
+
+    <!-- Стиль для заголовка ActionBar -->
+    <style name="ActionBarTitleStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/accent_cream</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">serif</item>
+    </style>
+
+    <!-- Стиль для кнопок -->
+    <style name="AppButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:textColor">@color/text_light</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <!-- Стиль для карточек -->
+    <style name="BookCardStyle">
+        <item name="android:background">@drawable/card_background</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <!-- Стиль для полей ввода текста -->
+    <style name="AppEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/edittext_background</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textColor">@color/text_dark</item>
+    </style>
+
+    <!-- Стиль для заголовков -->
+    <style name="HeaderTextStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/dark_green</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">serif</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <!-- Стиль для звездочек рейтинга -->
+    <style name="RatingBarStyle" parent="Widget.AppCompat.RatingBar">
+        <item name="android:progressTint">@color/rating_active</item>
+        <item name="android:progressBackgroundTint">@color/rating_inactive</item>
+    </style>
+</resources> 
