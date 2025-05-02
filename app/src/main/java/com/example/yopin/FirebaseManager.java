@@ -24,16 +24,27 @@ public class FirebaseManager {
     private DatabaseHelper localDb;
     
     private FirebaseManager(Context context) {
-        auth = FirebaseAuth.getInstance();
-        db = FirebaseFirestore.getInstance();
-        localDb = new DatabaseHelper(context);
+        try {
+            auth = FirebaseAuth.getInstance();
+            db = FirebaseFirestore.getInstance();
+            localDb = new DatabaseHelper(context);
+        } catch (Exception e) {
+            Log.e(TAG, "Ошибка при инициализации FirebaseManager: " + e.getMessage(), e);
+        }
     }
     
     public static synchronized FirebaseManager getInstance(Context context) {
-        if (instance == null) {
-            instance = new FirebaseManager(context.getApplicationContext());
+        try {
+            if (instance == null) {
+                instance = new FirebaseManager(context.getApplicationContext());
+            }
+            return instance;
+        } catch (Exception e) {
+            Log.e(TAG, "Ошибка в getInstance: " + e.getMessage(), e);
+            Toast.makeText(context, "Ошибка инициализации Firebase", Toast.LENGTH_SHORT).show();
+            // Создаем пустой экземпляр в случае ошибки
+            return new FirebaseManager(context.getApplicationContext());
         }
-        return instance;
     }
     
     // Регистрация нового пользователя
