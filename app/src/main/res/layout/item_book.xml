@@ -1,150 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
-    app:cardBackgroundColor="@color/accent_cream"
-    app:cardCornerRadius="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardBackgroundColor="@color/surface"
     app:cardElevation="4dp"
-    app:strokeColor="@color/accent_wood"
-    app:strokeWidth="1.5dp">
+    style="@style/AppCard">
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:background="@drawable/card_background">
+        android:padding="16dp">
 
         <ImageView
             android:id="@+id/ivBookIcon"
-            android:layout_width="60dp"
-            android:layout_height="80dp"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:src="@drawable/book_icon"
-            android:contentDescription="@string/book_icon"
-            android:padding="8dp"
-            android:background="@color/gradient_end"
-            android:elevation="2dp"
-            android:layout_marginEnd="16dp" />
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/quill_pen_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/primary" />
 
-        <LinearLayout
-            android:id="@+id/bookInfoLayout"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tvBookTitle"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/ivBookIcon"
-            android:orientation="vertical">
+            android:layout_marginStart="16dp"
+            android:textColor="@color/primary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/playfair_display_bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivBookIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Преступление и наказание" />
 
-            <TextView
-                android:id="@+id/tvBookTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:fontFamily="serif"
-                android:maxLines="1"
-                android:textColor="@color/dark_green"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvBookAuthor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            android:fontFamily="@font/merriweather"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivBookIcon"
+            app:layout_constraintTop_toBottomOf="@+id/tvBookTitle"
+            tools:text="Федор Достоевский" />
 
-            <TextView
-                android:id="@+id/tvBookAuthor"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:textColor="@color/text_dark"
-                android:textSize="15sp"
-                android:textStyle="italic" />
-                
-            <!-- Рейтинг книги -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
-                
-                <RatingBar
-                    android:id="@+id/ratingBarBook"
-                    style="?android:attr/ratingBarStyleSmall"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:isIndicator="true"
-                    android:numStars="5"
-                    android:stepSize="0.1"
-                    android:progressTint="@color/rating_active"
-                    android:secondaryProgressTint="@color/rating_inactive" />
-                    
-                <TextView
-                    android:id="@+id/tvRatingValue"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:textColor="@color/dark_green"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-                    
-                <TextView
-                    android:id="@+id/tvReviewCount"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginStart="8dp"
-                    android:textColor="@color/text_dark"
-                    android:textSize="12sp"
-                    android:textStyle="italic" />
-            </LinearLayout>
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/accent_light"
+            app:layout_constraintTop_toBottomOf="@+id/tvBookGenre" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tvBookGenre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/primary_light"
+            android:textSize="12sp"
+            android:fontFamily="@font/merriweather_italic"
+            app:layout_constraintEnd_toStartOf="@+id/tvBookYear"
+            app:layout_constraintStart_toEndOf="@+id/ivBookIcon"
+            app:layout_constraintTop_toBottomOf="@+id/tvBookAuthor"
+            tools:text="Классика" />
 
-                <TextView
-                    android:id="@+id/tvBookGenre"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textColor="@color/accent_leaf"
-                    android:textSize="14sp"
-                    android:background="@drawable/genre_background"
-                    android:paddingStart="6dp"
-                    android:paddingEnd="6dp"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp" />
+        <TextView
+            android:id="@+id/tvBookYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/primary_light"
+            android:textSize="12sp"
+            android:fontFamily="@font/merriweather_italic"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvBookGenre"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="1866" />
 
-                <TextView
-                    android:id="@+id/tvBookYear"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:textColor="@color/dark_green"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:background="@drawable/year_background"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp" />
-            </LinearLayout>
-        </LinearLayout>
-        
-        <!-- Кнопка для написания отзыва -->
+        <RatingBar
+            android:id="@+id/ratingBarBook"
+            style="@style/AppRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:stepSize="0.5"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:transformPivotX="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider"
+            tools:rating="4.5" />
+
+        <TextView
+            android:id="@+id/tvRatingValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/accent"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/merriweather_bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ratingBarBook"
+            app:layout_constraintStart_toEndOf="@+id/ratingBarBook"
+            app:layout_constraintTop_toTopOf="@+id/ratingBarBook"
+            tools:text="4.5" />
+
+        <TextView
+            android:id="@+id/tvReviewCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            android:fontFamily="@font/merriweather"
+            app:layout_constraintBottom_toBottomOf="@+id/ratingBarBook"
+            app:layout_constraintStart_toEndOf="@+id/tvRatingValue"
+            app:layout_constraintTop_toTopOf="@+id/ratingBarBook"
+            tools:text="(42 отзыва)" />
+
         <Button
             android:id="@+id/btnWriteReview"
-            android:layout_width="match_parent"
+            style="@style/AppNavButton"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/bookInfoLayout"
-            android:layout_marginTop="8dp"
-            android:text="@string/write_review"
-            android:textColor="@color/text_light"
-            android:background="@drawable/button_background"
-            android:textAllCaps="false"
-            android:textSize="14sp" />
-    </RelativeLayout>
-</com.google.android.material.card.MaterialCardView>
+            android:drawableStart="@drawable/quill_pen_icon"
+            android:drawableTint="@color/primary"
+            android:drawablePadding="8dp"
+            android:text="@string/add_review"
+            app:layout_constraintBottom_toBottomOf="@+id/ratingBarBook"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ratingBarBook" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

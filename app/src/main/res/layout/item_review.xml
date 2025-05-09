@@ -6,8 +6,8 @@
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     app:cardBackgroundColor="@color/accent_cream"
-    app:cardCornerRadius="10dp"
-    app:cardElevation="3dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
     app:strokeColor="@color/dark_green"
     app:strokeWidth="0.5dp">
 
@@ -20,7 +20,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
 
             <ImageView
                 android:layout_width="24dp"
@@ -30,15 +31,14 @@
                 android:contentDescription="@string/author_icon" />
 
             <TextView
-                android:id="@+id/tvUsername"
+                android:id="@+id/tvReviewUsername"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:layout_weight="1"
                 android:ellipsize="end"
                 android:fontFamily="serif"
                 android:maxLines="1"
-                android:textColor="@color/dark_green"
+                android:textColor="@color/primary_dark"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 tools:text="Имя пользователя" />
@@ -47,63 +47,85 @@
                 android:id="@+id/tvReviewDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:textColor="@color/disabled_gray"
-                android:textSize="12sp"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
                 android:textStyle="italic"
                 tools:text="01.01.2023" />
         </LinearLayout>
 
-        <RatingBar
-            android:id="@+id/ratingBar"
-            style="?android:attr/ratingBarStyleSmall"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:isIndicator="true"
-            android:numStars="5"
-            android:progressTint="@color/rating_active" />
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/tvReviewBookInfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/primary_light"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                tools:text="Название книги - Автор" />
+
+            <RatingBar
+                android:id="@+id/rbReviewRating"
+                style="@style/RatingBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:numStars="5"
+                android:stepSize="0.5"
+                android:rating="4.5" />
+        </LinearLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/divider" />
+            android:background="@color/accent_light"
+            android:layout_marginBottom="12dp" />
 
         <TextView
             android:id="@+id/tvReviewText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:textColor="@color/text_dark"
-            android:textSize="15sp"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
             tools:text="Текст отзыва, который может быть достаточно длинным и описывать впечатления читателя о книге." />
 
         <LinearLayout
-            android:id="@+id/llReviewActions"
+            android:id="@+id/layoutReviewActions"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:layout_marginTop="16dp"
-            android:gravity="end"
-            android:orientation="horizontal">
+            android:gravity="end">
 
             <Button
                 android:id="@+id/btnEditReview"
                 style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:minWidth="0dp"
-                android:minHeight="0dp"
-                android:paddingStart="12dp"
-                android:paddingTop="4dp"
-                android:paddingEnd="12dp"
-                android:paddingBottom="4dp"
                 android:text="Редактировать"
-                android:textColor="@color/dark_green"
-                android:textSize="12sp" />
+                android:textColor="@color/primary"
+                android:textSize="12sp"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <Button
+                android:id="@+id/btnDeleteReview"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Удалить"
+                android:textColor="@color/error"
+                android:textSize="12sp"
+                android:visibility="gone"
+                tools:visibility="visible" />
         </LinearLayout>
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

@@ -14,6 +14,7 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/tvTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -66,14 +67,13 @@
 
                 <RatingBar
                     android:id="@+id/ratingBar"
-                    style="@style/RatingBarStyle"
+                    style="@style/RatingBarInput"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="16dp"
-                    android:numStars="5"
-                    android:stepSize="0.5" />
+                    android:numStars="5" />
 
                 <TextView
                     style="@style/HeaderTextStyle"
@@ -94,7 +94,7 @@
                     android:maxLines="10" />
 
                 <Button
-                    android:id="@+id/btnSubmitReview"
+                    android:id="@+id/btnSaveReview"
                     style="@style/AppButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

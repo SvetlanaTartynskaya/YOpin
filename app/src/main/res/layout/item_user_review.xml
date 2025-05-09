@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
-    android:elevation="4dp">
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@color/surface">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,38 +20,49 @@
             android:id="@+id/tvBookInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="@color/colorPrimaryDark"
-            android:layout_marginBottom="8dp"/>
+            android:textColor="@color/primary_dark"
+            android:textSize="18sp"
+            tools:text="Название книги - Автор"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp">
 
             <RatingBar
                 android:id="@+id/ratingBar"
+                style="@style/RatingBarSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:numStars="5"
-                android:stepSize="1"
-                android:isIndicator="true"
-                style="?android:attr/ratingBarStyleSmall"/>
+                android:numStars="5"/>
 
             <TextView
                 android:id="@+id/tvReviewDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"/>
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                tools:text="01.01.2023"/>
         </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/accent_light"
+            android:layout_marginBottom="8dp" />
 
         <TextView
             android:id="@+id/tvReviewText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="14sp"/>
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            tools:text="Текст отзыва, который описывает впечатления читателя о книге."/>
     </LinearLayout>
-</androidx.cardview.widget.CardView> 
+</com.google.android.material.card.MaterialCardView> 

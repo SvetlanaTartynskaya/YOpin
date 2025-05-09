@@ -7,20 +7,13 @@
         </shape>
     </item>
     
-    <!-- Узор из книг -->
-    <item>
-        <bitmap
-            android:src="@drawable/book_pattern"
-            android:tileMode="repeat"
-            android:alpha="0.04" />
-    </item>
-    
-    <!-- Тонкая декоративная сетка -->
+    <!-- Упрощенный узор вместо сложного паттерна -->
     <item>
         <shape android:shape="rectangle">
+            <solid android:color="@color/background_beige" />
             <stroke 
                 android:width="0.5dp" 
-                android:color="@color/accent_gold" 
+                android:color="@color/accent_light" 
                 android:dashWidth="1dp"
                 android:dashGap="15dp" />
         </shape>

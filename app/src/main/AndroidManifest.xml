@@ -16,53 +16,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:targetApi="31">
-        <activity
-            android:name=".AddBookActivity"
-            android:exported="false"
-            android:theme="@style/AppTheme"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".AddReviewActivity"
-            android:exported="false"
-            android:theme="@style/AppTheme"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".BookReviewsActivity"
-            android:exported="false"
-            android:theme="@style/AppTheme" />
-        <activity
-            android:name=".BooksActivity"
-            android:exported="false"
-            android:theme="@style/AppTheme" />
-        <activity
-            android:name=".UserReviewsActivity"
-            android:exported="false"
-            android:theme="@style/AppTheme" />
-        <activity
-            android:name=".WriteReviewActivity"
-            android:exported="false"
-            android:theme="@style/AppTheme"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".ProfileActivity"
-            android:exported="false"
-            android:theme="@style/AppTheme" />
-        <activity
-            android:name=".RegisterActivity"
-            android:exported="false"
-            android:theme="@style/AppTheme"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".LoginActivity"
-            android:exported="true"
-            android:theme="@style/AppTheme"
-            android:windowSoftInputMode="adjustResize">
-        </activity>
-        <activity
-            android:name=".EditReviewActivity"
-            android:exported="false"
-            android:theme="@style/AppTheme"
-            android:windowSoftInputMode="adjustResize" />
+        
+        <!-- Поддержка Google Fonts -->
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        
+        <!-- Главная активность (точка входа) -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -72,6 +32,31 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <!-- Базовая активность для всех экранов приложения -->
+        <activity
+            android:name=".BaseActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+            
+        <!-- Вход и регистрация -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize" />
+            
+        <!-- Редактирование профиля -->
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

@@ -1,34 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Базовые цвета Material Design -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="colorBackground">#F5F5DC</color>
-    <color name="colorPrimary">#0A3D0A</color>
-    <color name="colorPrimaryDark">#072807</color>
-
-    <!-- Основная цветовая палитра -->
-    <color name="dark_green">#0A3D0A</color>
-    <color name="dark_green_variant">#072807</color>
-    <color name="light_green">#1B5E20</color>
-    <color name="accent_gold">#D4AF37</color>
-    <color name="accent_cream">#FFFDD0</color>
-    <color name="background_beige">#F5F5DC</color>
-    <color name="text_dark">#1A3311</color>
-    <color name="text_light">#F5F5DC</color>
-    <color name="disabled_gray">#9E9E9E</color>
-    <color name="ripple_color">#3DF5F5DC</color>
     
-    <!-- Градиентные цвета -->
-    <color name="gradient_start">#072807</color>
-    <color name="gradient_center">#0A3D0A</color>
-    <color name="gradient_end">#1B5E20</color>
+    <!-- Основная цветовая палитра приложения -->
+    <color name="primary">#1E4D2B</color>      <!-- Темно-зеленый (основной) -->
+    <color name="primary_dark">#143420</color>  <!-- Темно-зеленый (темнее) -->
+    <color name="primary_light">#3E7D4B</color> <!-- Темно-зеленый (светлее) -->
+    <color name="dark_green">#1E4D2B</color>    <!-- Темно-зеленый (для обратной совместимости) -->
+    <color name="dark_green_variant">#143420</color> <!-- Вариант темно-зеленого -->
+    <color name="light_green">#4CAF50</color>   <!-- Светло-зеленый -->
     
-    <!-- Цвета рейтинга -->
-    <color name="rating_active">#D4AF37</color>
-    <color name="rating_inactive">#D1C8A8</color>
+    <color name="accent">#F0BC87</color>        <!-- Бежево-золотистый (акцент) -->
+    <color name="accent_light">#F5D7B5</color>  <!-- Светлый бежевый -->
+    <color name="accent_dark">#D2986B</color>   <!-- Темный бежевый -->
+    <color name="accent_gold">#D4AF37</color>   <!-- Золотистый акцент -->
+    <color name="accent_cream">#FFF2D9</color>  <!-- Кремовый акцент -->
+    <color name="accent_leaf">#85B09A</color>   <!-- Акцент цвета листа -->
+    <color name="accent_wood">#8B4513</color>   <!-- Акцент древесного цвета -->
     
-    <!-- Новые декоративные цвета -->
-    <color name="accent_leaf">#537A4C</color>
-    <color name="accent_sand">#E8D6B3</color>
-    <color name="accent_wood">#8B5A2B</color>
+    <color name="background">#FFF8E1</color>    <!-- Очень светлый бежевый (фон) -->
+    <color name="background_beige">#F8F0E0</color> <!-- Бежевый фон -->
+    <color name="surface">#FFFEF7</color>       <!-- Кремово-белый (поверхности) -->
+    
+    <!-- Текстовые цвета -->
+    <color name="text_primary">#212121</color>  <!-- Основной текст -->
+    <color name="text_secondary">#757575</color><!-- Вторичный текст -->
+    <color name="text_on_primary">#FFFFFF</color><!-- Текст на темно-зеленом фоне -->
+    <color name="text_on_accent">#4C3000</color><!-- Текст на бежевом фоне -->
+    <color name="text_dark">#333333</color>     <!-- Темный текст -->
+    
+    <!-- Функциональные цвета -->
+    <color name="success">#2E7D32</color>       <!-- Зеленый (успех) -->
+    <color name="error">#B71C1C</color>         <!-- Красный (ошибка) -->
+    <color name="warning">#F57F17</color>       <!-- Оранжевый (предупреждение) -->
+    <color name="info">#0288D1</color>          <!-- Синий (информация) -->
+    
+    <!-- Градиенты -->
+    <color name="gradient_start">#1E4D2B</color><!-- Начало градиента -->
+    <color name="gradient_center">#245F35</color><!-- Центр градиента -->
+    <color name="gradient_end">#2E7D32</color>  <!-- Конец градиента -->
+    
+    <!-- Состояния кнопок -->
+    <color name="btn_disabled">#BDBDBD</color>  <!-- Отключенная кнопка -->
+    <color name="disabled_gray">#9E9E9E</color> <!-- Серый (отключенный) -->
+    
+    <!-- Звездный рейтинг -->
+    <color name="rating_empty">#D2D2D2</color>  <!-- Пустая звезда -->
+    <color name="rating_filled">#F0BC87</color> <!-- Заполненная звезда -->
+    <color name="rating_active">#FFB74D</color> <!-- Активная звезда -->
+    
+    <!-- Обратная совместимость с предыдущими цветами -->
+    <color name="colorPrimary">@color/primary</color>
+    <color name="colorPrimaryDark">@color/primary_dark</color>
+    <color name="colorAccent">@color/accent</color>
+    <color name="colorBackground">@color/background</color>
 </resources>

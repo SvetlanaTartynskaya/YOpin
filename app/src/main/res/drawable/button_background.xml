@@ -1,48 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
-    android:color="@color/ripple_color">
+    android:color="@color/accent_light">
     <item>
-        <layer-list>
-            <!-- Тень -->
-            <item android:left="1dp" android:top="1dp">
-                <shape android:shape="rectangle">
-                    <corners android:radius="10dp" />
-                    <solid android:color="#40000000" />
-                </shape>
-            </item>
-            <!-- Основной фон кнопки -->
-            <item android:bottom="2dp" android:right="2dp">
-                <shape android:shape="rectangle">
-                    <corners android:radius="10dp" />
-                    <gradient
-                        android:type="linear"
-                        android:angle="135"
-                        android:startColor="@color/gradient_start"
-                        android:centerColor="@color/gradient_center"
-                        android:endColor="@color/gradient_end" />
-                    <stroke
-                        android:width="1.5dp"
-                        android:color="@color/accent_gold" />
-                    <padding
-                        android:left="12dp"
-                        android:top="8dp"
-                        android:right="12dp"
-                        android:bottom="8dp" />
-                </shape>
-            </item>
-            <!-- Декоративный элемент -->
-            <item android:right="12dp" android:gravity="end|center_vertical">
-                <shape android:shape="oval">
-                    <size android:width="6dp" android:height="6dp" />
-                    <solid android:color="@color/accent_gold" />
-                </shape>
-            </item>
-            <item android:left="12dp" android:gravity="start|center_vertical">
-                <shape android:shape="oval">
-                    <size android:width="6dp" android:height="6dp" />
-                    <solid android:color="@color/accent_gold" />
-                </shape>
-            </item>
-        </layer-list>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/primary" />
+            <corners android:radius="12dp" />
+            <padding
+                android:bottom="12dp"
+                android:left="24dp"
+                android:right="24dp"
+                android:top="12dp" />
+        </shape>
     </item>
 </ripple> 
